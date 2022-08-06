@@ -1,0 +1,7 @@
+[package]
+name = "is_odd"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+is_odd_macro = { path = "../is_odd/is_odd_macro" }

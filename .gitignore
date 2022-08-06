@@ -1,0 +1,5 @@
+/target/
+Cargo.lock
+
+/is_odd_macro/target/
+/is_odd_macro/Cargo.lock
