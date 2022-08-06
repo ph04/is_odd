@@ -1,4 +1,4 @@
-# id_odd
+# is_odd
 
 This library allows you to check if a number is odd.
 
