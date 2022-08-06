@@ -2,20 +2,27 @@ extern crate proc_macro;
 
 use proc_macro::TokenStream;
 
+const ARROW: &str = "=>";
+const TRUE: &str = "true";
+const FALSE: &str = "false";
+
 #[proc_macro]
 pub fn is_odd_builder(_: TokenStream) -> TokenStream {
-    let mut result = String::from("match number {");
+    let mut result = String::from("match number{");
 
     (0..usize::MAX)
+    // (0..10)
         .for_each(|number| {
-            let mut statement = number.to_string();
+            result.push_str(&number.to_string());
 
-            statement.push_str("=> ");
+            result.push_str(ARROW);
 
-            statement.push_str(&(number & 1).to_string());
+            result.push_str(if number & 1 == 1 { TRUE } else { FALSE });
+
+            result.push(',');
         });
 
-    result.push_str("_ => unreachable!() }");
+    result.push_str("_=>unreachable!()}");
 
     result.parse().unwrap()
 }
