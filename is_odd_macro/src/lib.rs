@@ -11,7 +11,6 @@ pub fn is_odd_builder(_: TokenStream) -> TokenStream {
     let mut result = String::from("match number{");
 
     (0..usize::MAX)
-    // (0..10)
         .for_each(|number| {
             result.push_str(&number.to_string());
 

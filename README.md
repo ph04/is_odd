@@ -11,7 +11,3 @@ fn main() {
     println!("{}", is_odd(4));
 }
 ```
-
-# TODO list
-
-- [ ] remove allocations
